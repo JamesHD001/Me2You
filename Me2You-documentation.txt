@@ -1,0 +1,688 @@
+ME2YOU: YOUR COMMUNICATION COMPANION
+Product Vision, Requirements, Architecture and Security Documentation
+Document status: Working product specification
+Version: 0.2
+Last updated: 17 November 2026
+
+======================================================================
+1. PRODUCT OVERVIEW
+======================================================================
+
+Product name:
+Me2You: Your Communication Companion
+
+Product category:
+Communication Development Platform
+
+Working tagline:
+"Every voice matters. Every conversation counts."
+
+Purpose:
+Me2You is a cross-platform communication development platform designed to help people build effective communication skills, practise meaningful interaction, and develop confidence in personal, social, academic, and professional settings.
+
+Target platforms:
+- Web
+- Android
+- iOS
+
+The three clients should share a consistent product experience, account system, learning progress, safety rules, and backend services. Platform-specific capabilities may differ where operating-system permissions and APIs require it.
+
+Me2You is broader than public speaking. It is not simply a speech-training application, a social network, or a video-chat application. It combines structured learning, guided practice, human interaction, and progress reflection.
+
+Foundational principle:
+Help people become more effective communicators without treating quietness, introversion, shyness, or a preference for listening as defects. The objective is not to make every user loud or extroverted. It is to help each person communicate intentionally, clearly, respectfully, and confidently in ways that suit their personality and goals.
+
+======================================================================
+2. THE PROBLEM AND OPPORTUNITY
+======================================================================
+
+Some people have limited opportunities to practise everyday communication. Their experiences, upbringing, environment, confidence, or circumstances may make spontaneous interaction difficult.
+
+They may find it challenging to:
+- Start conversations with unfamiliar people.
+- Introduce themselves naturally.
+- Express ideas clearly.
+- Keep a conversation going.
+- Listen actively and respond thoughtfully.
+- Read and use non-verbal communication.
+- Communicate feelings and boundaries.
+- Navigate disagreements and conflict.
+- Communicate in academic or professional settings.
+- Lead discussions, give feedback, or address groups.
+- Build and maintain meaningful relationships.
+
+Social media provides communication channels, but it does not necessarily provide structured instruction, deliberate practice, useful feedback, or a safe progression from beginner exercises to real-world interaction.
+
+Me2You addresses this gap by connecting learning with practice and real human conversation.
+
+======================================================================
+3. PRODUCT PHILOSOPHY
+======================================================================
+
+3.1 Communication is learnable
+Communication is a set of skills that can be developed through awareness, instruction, practice, reflection, and feedback.
+
+3.2 Progress should be personal
+Users should be able to set goals and measure progress against their own starting point, not only against other users.
+
+3.3 Practice should be psychologically safe
+The product should encourage growth without humiliation, public ranking, pressure to disclose personal information, or unnecessary exposure.
+
+3.4 Human interaction matters
+AI can provide repeatable practice, but it cannot fully reproduce the complexity, unpredictability, and mutual understanding involved in real human communication.
+
+3.5 Privacy and consent are foundational
+Users must understand what information is collected, who can see it, and what happens during a conversation session.
+
+3.6 Accessibility and inclusion
+Consider different communication styles, disabilities, language abilities, connectivity conditions, and levels of experience.
+
+======================================================================
+4. CORE PRODUCT PILLARS
+======================================================================
+
+LEARN
+Structured lessons, explanations, examples, learning paths, and practical assignments.
+
+PRACTISE
+AI-supported simulations, interactive exercises, roleplay, speaking practice, writing practice, and feedback.
+
+CONNECT
+Private one-to-one conversations with other people through carefully designed matching and video sessions.
+
+GROW
+Self-assessments, reflections, progress indicators, completed challenges, and recommendations for next steps.
+
+The pillars should work together. A user should be able to learn a concept, practise it, apply it with another person, and reflect on the experience.
+
+======================================================================
+5. COMMUNICATION SKILL AREAS
+======================================================================
+
+The curriculum should cover, but not be limited to:
+
+1. Self-awareness and communication habits.
+2. Verbal communication, clarity, articulation, and tone.
+3. Non-verbal communication, body language, facial expressions, and eye contact.
+4. Introductions and social interaction.
+5. Starting, maintaining, and ending conversations.
+6. Active listening and thoughtful responses.
+7. Asking questions and showing curiosity.
+8. Emotional and interpersonal communication.
+9. Assertiveness, boundaries, and respectful disagreement.
+10. Conflict management and difficult conversations.
+11. Written communication.
+12. Academic and professional communication.
+13. Interviews, presentations, and public speaking.
+14. Leadership communication, facilitation, and feedback.
+15. Cross-cultural communication and communication across language differences.
+16. Real-world communication habits and application.
+
+Possible progressive learning path:
+Stage 1: Self-awareness.
+Stage 2: Finding your voice.
+Stage 3: Social interaction.
+Stage 4: Conversational intelligence.
+Stage 5: Emotional and interpersonal communication.
+Stage 6: Professional communication.
+Stage 7: Leadership communication.
+Stage 8: Real-world application.
+
+The sequence and learning outcomes require research and validation before implementation.
+
+======================================================================
+6. TARGET USERS AND AGE POLICY
+======================================================================
+
+The platform is intended for people who want to improve one or more aspects of communication, including people who find it difficult to initiate conversations, students, early-career professionals, interview candidates, emerging leaders, and people who want structured opportunities to practise.
+
+The product must not assume that every user has the same needs or that all users need the same learning path.
+
+Age eligibility is unresolved. An 18+ MVP is a candidate option, not an approved decision. Do not enable public matchmaking or video calls until the age policy, age assurance approach, and safeguarding requirements have been approved.
+
+======================================================================
+7. CORE USER EXPERIENCE AND FEATURES
+======================================================================
+
+7.1 Accounts and onboarding
+- Account registration and secure sign-in.
+- Email and/or phone verification as appropriate.
+- Password recovery and secure session management.
+- Onboarding that explains the product and asks about user goals.
+- Initial communication self-assessment.
+- User-controlled privacy and notification preferences.
+- Clear consent and safety explanations before social features are enabled.
+
+7.2 Usernames and profiles
+The public-facing identity should use usernames rather than requiring users to display legal names.
+
+Proposed profile fields:
+- Unique username.
+- Optional display name.
+- Profile picture or avatar.
+- Short biography.
+- Interests.
+- Preferred language(s).
+- Communication goals.
+- Optional self-described experience or learning level.
+- Public verification badge, if verification is completed.
+- User-controlled visibility for personal profile details.
+
+Private account information such as email address, phone number, and identity-verification records must not be exposed on public profiles. A username does not make an account anonymous or prove a person's identity.
+
+7.3 Verified profiles
+Me2You should support profile verification.
+
+Principles:
+- Verification must be performed by a trusted server-side process or approved verification provider.
+- Users must not be able to grant themselves a badge by editing a profile field.
+- The badge communicates only that the defined verification process was completed.
+- A badge must not imply that a person is safe, trustworthy in every situation, or an effective communicator.
+- Legal identity and verification evidence remain private and access-controlled.
+- Collect the minimum information needed. Do not require government identification by default without a justified risk, legal, and operational assessment.
+- Provide processes for failed, expired, disputed, or revoked verification.
+- Explain what verification means and what it does not mean.
+
+Verification methods, provider, cost, regional availability, retention, and appeals process remain undecided.
+
+7.4 Learning centre
+- Structured lessons and modules.
+- Learning paths based on goals and self-assessment.
+- Short explanations and examples.
+- Practical exercises and assignments.
+- Knowledge checks where useful.
+- Completion tracking.
+- Accessibility support and readable content.
+
+7.5 AI practice
+- Conversation simulations and roleplay.
+- Situational practice such as introductions, interviews, meetings, and difficult conversations.
+- Speaking and articulation exercises where supported.
+- Writing and message-revision exercises.
+- Feedback that is specific, respectful, and actionable.
+- Recommendations linked to learning objectives.
+
+AI should not present subjective judgements as absolute truths. Feedback should explain its limits and avoid diagnosing users or making unsupported psychological claims.
+
+AI provider selection is not final. Use a provider-independent service layer so providers can be changed without redesigning the product.
+
+7.6 Human-to-human conversations
+A core feature is a private video conversation between exactly two participants.
+
+Conversation modes:
+
+A. Guided conversations
+- A mission, prompt, topic, or activity helps participants practise a skill.
+- Example mission: "Getting to Know Someone."
+- Possible steps: introduce yourself, ask an open question, listen and follow up, share appropriately, and close respectfully.
+
+B. Free conversations
+- Participants have a natural conversation without a predefined lesson agenda.
+- Community guidelines and safety controls still apply.
+
+Matching methods:
+- Automatic matchmaking.
+- User-selected or browse-based matchmaking.
+
+Potential matching preferences:
+- Communication goals or experience level.
+- Preferred language.
+- Shared interests.
+- Availability.
+- Session type.
+- Other user-selected compatibility preferences.
+
+Matching must not expose private data or enable discriminatory or unsafe filtering. Review matching for fairness, privacy, and abuse prevention.
+
+Session duration:
+Support predefined durations and flexible sessions, subject to product limits and safety rules. Candidate presets are 10-minute quick, 15-minute standard, and 30-minute extended sessions. These values are provisional.
+
+Call interface:
+- Camera on/off.
+- Microphone mute/unmute.
+- End-call control.
+- Connection status.
+- Optional conversation prompts or mission steps.
+- Clear participant identity and session context.
+- Accessible controls and error states.
+- Post-session reflection.
+
+Session rules:
+- Exactly two participants per call.
+- No public audience or spectator access.
+- No unsolicited calls. A user must accept or explicitly join a session.
+- Obtain clear consent before connecting.
+- Either participant can end a session at any time.
+- Provide block and report controls.
+- Do not record calls by default.
+- Do not introduce recording without separate explicit consent design and legal review.
+- Use short-lived, server-generated access tokens.
+- Authorize both participants server-side and enforce room membership and participant limits server-side.
+
+7.7 Post-session reflection and growth
+Possible reflection prompts:
+- How comfortable did you feel?
+- Did you initiate or contribute to the conversation?
+- Did you listen and ask follow-up questions?
+- Were you able to express your thoughts?
+- What felt difficult?
+- What would you like to try differently next time?
+
+Track progress through completed learning activities, practice sessions, personal goals, and user reflections. Avoid turning progress into a public popularity contest.
+
+7.8 Safety and moderation
+- Block and unblock users.
+- Report users and specific conduct.
+- End a call immediately.
+- Moderation review and escalation workflows.
+- Rate limits and abuse detection.
+- Restrictions for repeated violations.
+- Clear community standards.
+- Appeals and account recovery processes.
+- Safety education before first use of social features.
+
+Moderation must account for false reports, privacy, evidence minimization, and fair review.
+
+======================================================================
+8. SCREEN PRIVACY AND CAPTURE PROTECTION
+======================================================================
+
+Feature name:
+Me2You Screen Privacy Protection
+
+Objective:
+Reduce the risk of private conversations or sensitive information being captured and redistributed without consent.
+
+Important limitation:
+No cross-platform application can guarantee that every screenshot, screen recording, stream, mirror, or external-camera recording will be prevented. Operating systems control many capture functions, browser applications have limited control, and a person can film a device using another camera. Product wording must never promise absolute prevention.
+
+Android:
+- For native Android screens displaying sensitive content, evaluate and use Android's FLAG_SECURE where appropriate.
+- This can block screenshots and prevent protected windows from appearing in certain non-secure displays or capture paths.
+- Test supported Android versions, device manufacturers, casting, accessibility, and app-switcher behaviour.
+- Treat this as a protection layer, not an absolute guarantee.
+
+iOS:
+- Use supported screen-capture state APIs, including scene capture state, to detect supported recording, mirroring, or capture conditions.
+- When capture is detected, apply the approved response, such as obscuring sensitive content, showing a privacy notice, pausing sensitive interactions, or ending a session when justified.
+- iOS screenshot events can be detected in some circumstances, but applications do not have a universal API to prevent screenshots.
+- Validate API behaviour against supported iOS versions and current Apple documentation.
+
+Web:
+- A browser application cannot reliably block operating-system screenshots or screen recording.
+- Do not rely on disabling right-click, keyboard shortcuts, or browser scripts as security controls.
+- Use proportionate deterrents and privacy-aware UI, and clearly disclose limitations.
+
+Additional protective measures:
+- Consider a visible dynamic watermark during calls. It may include the viewer's username or account identifier, a session reference, and a timestamp, with privacy and abuse considerations.
+- Watermarks discourage redistribution and may help investigate leaks, but do not prevent capture.
+- Minimize sensitive information displayed during calls.
+- Do not expose private contact information to matched users.
+- Provide reporting and response procedures for non-consensual capture or sharing.
+- Decide whether capture detection should show a warning, obscure content, pause a session, or end a session. Avoid automatically terminating every session without considering legitimate accessibility or mirroring use.
+- Do not build an in-app call recording feature into the initial release unless separately approved with explicit consent, legal review, and clear controls.
+
+Native screen-capture protection requires native platform APIs. A web-only implementation cannot provide equivalent protection. The mobile architecture must preserve access to these platform-specific capabilities.
+
+======================================================================
+9. PLATFORM AND TECHNICAL ARCHITECTURE
+======================================================================
+
+Platform commitment:
+Web, Android, and iOS are all intended product platforms.
+
+Architecture recommendation for evaluation:
+- Web client: Next.js, React, and TypeScript.
+- Mobile clients: React Native with Expo and TypeScript, with custom native modules/configuration where required for platform-specific security and capture APIs.
+- Shared packages: TypeScript types, validation schemas, API clients, design tokens, and reusable business logic where appropriate.
+- Backend: Supabase with PostgreSQL, Auth, Storage, and Realtime as appropriate.
+- Video and audio: evaluate LiveKit Cloud as the leading candidate for real-time one-to-one communication.
+- Hosting: evaluate Vercel for the web application and suitable managed hosting for backend services.
+- Source control and collaboration: GitHub.
+- Testing: Vitest for suitable unit tests and Playwright for web end-to-end tests; add mobile testing tools for native clients.
+- Monorepo: consider pnpm workspaces or Turborepo to manage web, mobile, and shared packages.
+
+These are recommendations, not final technology approvals. Confirm pricing, quotas, regional availability, privacy terms, platform support, operational complexity, and maintainability before committing.
+
+The web and mobile products should share the same backend, user accounts, authorization rules, learning content, and core product behaviour. Native mobile clients are needed for deeper OS integration, mobile notifications, camera/microphone permissions, and platform-specific screen privacy controls.
+
+Potential repository structure:
+
+apps/
+  web/
+  mobile/
+
+packages/
+  ui/
+  types/
+  validation/
+  api-client/
+  config/
+  shared/
+
+supabase/
+  migrations/
+  seed/
+
+docs/
+  product/
+  architecture/
+  security/
+  privacy/
+
+tests/
+  integration/
+  e2e/
+
+Root project files:
+  README.md
+  TODO.md
+  Me2You-documentation.txt
+  AGENTS.md
+  .env.example
+
+The structure is a proposal. Final structure should be agreed before implementation.
+
+======================================================================
+10. BACKEND AND DATA DESIGN PRINCIPLES
+======================================================================
+
+The backend should be authoritative for identity, permissions, matchmaking eligibility, verification status, call membership, and moderation decisions.
+
+Potential domain areas:
+- Accounts and authentication.
+- Public profiles and private account data.
+- Identity verification records.
+- User preferences and privacy settings.
+- Learning paths, lessons, exercises, and completions.
+- Assessments and reflections.
+- AI practice sessions and feedback.
+- Matchmaking preferences and queues.
+- Conversation sessions and participant membership.
+- Reports, blocks, moderation actions, and audit events.
+- Notifications and user consent records.
+
+Data design principles:
+- Separate public profile data from private account data.
+- Store only information needed for the product.
+- Enforce access using server-side authorization and database-level policies such as PostgreSQL Row Level Security.
+- Never trust client-supplied roles, verification flags, participant counts, or permissions.
+- Protect secrets and service-role credentials from client applications.
+- Use migrations and reviewed schema changes.
+- Define data retention and deletion policies before collecting sensitive data.
+- Restrict access to verification evidence and moderation records.
+- Use audit logging proportionately for sensitive administrative actions.
+
+======================================================================
+11. SECURITY REQUIREMENTS
+======================================================================
+
+11.1 Authentication
+- Secure sign-in and account recovery.
+- Email/phone verification according to the approved onboarding policy.
+- Secure session handling and token rotation/revocation where supported.
+- Consider multi-factor authentication, especially for administrators and moderators.
+- Protect against credential stuffing, brute force, and account enumeration.
+
+11.2 Authorization
+- Enforce permissions on the server and database.
+- Apply least privilege.
+- Use Row Level Security for user-owned and sensitive records.
+- Do not rely on hidden UI elements as access control.
+- Ensure users can access only their own private data and explicitly shared information.
+
+11.3 Video security
+- Generate room credentials on trusted server infrastructure.
+- Use short-lived tokens with only required permissions.
+- Validate that the requesting user is an authorized participant.
+- Enforce the two-participant maximum.
+- Prevent unauthorized room joining, token reuse where possible, and access after session termination.
+- Revoke or expire access when sessions end.
+- Do not expose provider secrets in browser or mobile bundles.
+
+11.4 Application security
+- Validate all untrusted input.
+- Apply rate limits to authentication, matching, messaging, reporting, and other abuse-prone operations.
+- Protect against common web vulnerabilities, including injection, cross-site scripting, cross-site request forgery where applicable, insecure direct object references, and broken access control.
+- Keep dependencies updated and scan for known vulnerabilities.
+- Use secure transport.
+- Keep secrets in environment-specific secret stores.
+- Maintain separate development, staging, and production environments.
+- Back up important data and test restoration.
+
+11.5 Administrative security
+- Restrict administrative access.
+- Require stronger authentication for privileged accounts.
+- Log sensitive administrative actions.
+- Separate moderation permissions from unrestricted infrastructure access where practical.
+- Review access periodically.
+
+Use a recognized baseline such as OWASP ASVS, adapted to the application and risk profile.
+
+======================================================================
+12. PRIVACY, CONSENT, AND COMPLIANCE
+======================================================================
+
+Adopt privacy-by-design and data-minimization principles.
+
+Requirements to define:
+- Privacy policy and terms of service.
+- Clear explanation of data collected and why.
+- Consent for camera, microphone, and social interaction.
+- Consent rules for any future recording or transcription.
+- Data retention periods.
+- Account deletion and data export processes.
+- Access restrictions for sensitive information.
+- Incident response and breach notification procedures.
+- Vendor and AI-provider data-processing terms.
+- Children's privacy and age assurance if users under 18 are ever supported.
+- Regional legal requirements, including the Nigeria Data Protection Act 2023 where applicable and GDPR where applicable.
+
+Do not assume one global age or privacy policy automatically satisfies every jurisdiction. Obtain appropriate legal and privacy review before public launch.
+
+======================================================================
+13. AI DESIGN PRINCIPLES
+======================================================================
+
+AI should be a coach and practice partner, not a replacement for human relationships or a clinical authority.
+
+The AI layer should:
+- Support multiple providers through an abstraction layer.
+- Use clear prompts and structured output validation.
+- Keep feedback constructive and specific.
+- Link feedback to stated learning objectives.
+- Avoid shaming, stereotyping, or diagnosing users.
+- Explain uncertainty and limitations.
+- Protect user content and minimize retention.
+- Avoid sending sensitive data to external providers unless necessary and disclosed.
+- Include cost controls, usage limits, monitoring, and abuse prevention.
+
+The exact AI provider, models, features, and release phase remain undecided.
+
+======================================================================
+14. PRODUCT EXPERIENCE AND DESIGN
+======================================================================
+
+The product should feel welcoming, calm, modern, accessible, and trustworthy.
+
+Experience principles:
+- Clear navigation across Learn, Practise, Connect, and Grow.
+- Consistent design language across web, Android, and iOS.
+- Responsive web layouts and native mobile interaction patterns.
+- Accessible typography, contrast, labels, focus states, and controls.
+- Helpful empty states and clear error messages.
+- Low-bandwidth and unreliable-network considerations, especially for video.
+- Avoid engagement mechanics that pressure users into excessive use.
+- Do not rank users by popularity or treat communication development as a competition.
+
+Visual identity, colour palette, typography, and detailed design system are still to be finalized.
+
+======================================================================
+15. MVP SCOPE AND DELIVERY STRATEGY
+======================================================================
+
+The first release should validate the central product promise without attempting to build every possible feature at once.
+
+Potential MVP capabilities:
+1. Account creation and secure authentication.
+2. Username-based profiles and privacy settings.
+3. Onboarding and communication goals.
+4. Initial assessment.
+5. A small, high-quality set of structured lessons.
+6. Guided exercises and AI-supported practice, if approved for the initial release.
+7. Two-person video sessions.
+8. Guided and free conversation modes.
+9. Automatic and user-selected matchmaking, subject to safety readiness.
+10. Post-session reflection and basic progress tracking.
+11. Block/report and moderation workflows.
+12. Core privacy, consent, and security controls.
+13. Web, Android, and iOS delivery with a shared backend.
+
+MVP sequencing must be validated. It may be safer to release learning and individual practice before enabling open matchmaking, but the final release plan should be based on user research and safeguarding review.
+
+Do not launch live matchmaking until age policy, identity/profile rules, moderation operations, consent, reporting, and incident response are ready.
+
+======================================================================
+16. QUALITY ASSURANCE AND TESTING
+======================================================================
+
+Testing must cover:
+- Authentication and account recovery.
+- Profile privacy and authorization.
+- Verification workflow and badge integrity.
+- Learning progress persistence.
+- AI input/output validation and failure handling.
+- Matchmaking eligibility and fairness.
+- Two-participant room enforcement.
+- Token expiry and unauthorized access.
+- Block/report behaviour.
+- Session ending and cleanup.
+- Screen-capture protection behaviour on supported Android and iOS versions.
+- Web capture limitation messaging.
+- Accessibility and responsive layouts.
+- Poor network and reconnect behaviour.
+- Cross-platform consistency.
+- Data deletion and retention workflows.
+
+Test security-sensitive behaviour on real devices where practical. Simulators alone are not sufficient for all capture, camera, microphone, and device-specific behaviours.
+
+======================================================================
+17. SUCCESS MEASURES
+======================================================================
+
+Possible measures:
+- Users completing onboarding and setting a goal.
+- Lesson completion and practice frequency.
+- Repeat practice over time.
+- Human conversation sessions completed.
+- User-reported comfort and confidence changes.
+- Improvement against personal communication objectives.
+- Safety reports and response times.
+- Matchmaking acceptance and successful connection rates.
+- Session interruption and technical failure rates.
+- Accessibility and user satisfaction feedback.
+
+Metrics should be privacy-conscious and should not reduce communication ability to a single score.
+
+======================================================================
+18. OPEN DECISIONS
+======================================================================
+
+The following decisions require discussion and approval before implementation:
+
+1. Age eligibility:
+   - 18+ initial release.
+   - 16+ with enhanced safeguards.
+   - Other age-separated model.
+   No option is approved yet.
+
+2. Cross-platform implementation:
+   - Current recommendation: Next.js web + React Native/Expo mobile + shared TypeScript packages.
+   - Confirm whether this is the preferred development approach.
+
+3. Backend:
+   - Current recommendation: Supabase/PostgreSQL.
+   - Compare with a custom Node.js backend or other managed PostgreSQL options.
+
+4. Video infrastructure:
+   - Current leading candidate: LiveKit Cloud.
+   - Evaluate alternatives, pricing, regional performance, and native/web SDK support.
+
+5. AI:
+   - Decide whether AI practice is part of the first release or a later phase.
+   - Select provider(s), privacy requirements, and budget limits.
+
+6. Identity verification:
+   - Decide what the badge verifies.
+   - Select provider/method and define appeals, retention, and regional availability.
+
+7. Screen privacy response:
+   - Decide whether capture detection warns, obscures, pauses, or ends a session on each platform.
+   - Define exceptions for accessibility and legitimate mirroring.
+
+8. Session duration:
+   - Validate proposed presets and maximum flexible duration.
+
+9. Curriculum:
+   - Validate skill areas, stages, assessment method, and lesson content with target users.
+
+10. Product identity:
+   - Confirm visual design system and conduct appropriate name, trademark, and domain checks. Me2You remains a working product name until clearance is completed.
+
+11. Release strategy:
+   - Decide which features are required for the first public release and which can follow.
+
+======================================================================
+19. PROJECT WORKING AGREEMENTS
+======================================================================
+
+- Discuss architecture and security before implementation.
+- Keep documentation and TODO list synchronized with approved decisions.
+- Update this documentation before updating TODO.md whenever that order is requested.
+- Distinguish approved requirements from proposals and unresolved decisions.
+- Do not claim a security capability that the platform cannot guarantee.
+- Use clean, maintainable code and a clear project structure.
+- Avoid inline CSS unless explicitly required.
+- Avoid one-line CSS rules and compressed, unreadable code.
+- Explain important technical decisions in beginner-friendly language when useful.
+- Use version control and meaningful commits.
+- Do not expose secrets in source control.
+- Build incrementally and test each major feature.
+
+======================================================================
+20. CURRENT PROJECT STATUS
+======================================================================
+
+Confirmed:
+- Product name: Me2You: Your Communication Companion.
+- Product scope: communication development beyond public speaking.
+- Core pillars: Learn, Practise, Connect, Grow.
+- Target platforms: web, Android, and iOS.
+- Human conversation: private two-person video calls.
+- Conversation types: guided and free.
+- Matchmaking: automatic and user-selected.
+- Session durations: fixed presets and flexible sessions.
+- Public identity: usernames rather than mandatory real-name display.
+- Verified profile feature: desired.
+- Screen privacy protection: desired, subject to platform limitations.
+
+Proposed, not yet approved:
+- Next.js web client.
+- React Native/Expo mobile clients.
+- Supabase/PostgreSQL backend.
+- LiveKit Cloud video infrastructure.
+- Vercel hosting for web.
+- OWASP ASVS-informed security baseline.
+- 18+ initial release.
+
+Not yet completed:
+- Detailed user research and competitor analysis.
+- Final curriculum and assessment.
+- Final age policy and safeguarding model.
+- Approved architecture and vendor selection.
+- Data model and threat model.
+- Privacy policy and retention schedule.
+- UI/UX design system.
+- Implementation and testing.
+
+END OF DOCUMENT
